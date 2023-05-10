@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Text-Mint</title>
+
+	
+	
+	<!---custom css link---->
+	<link rel="stylesheet" type="text/css" href="fyp2.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js"></script>
+</head>
+<body>
+
+	<!----header design--->
+	<header>
+		<img  class="logo" src="1.jpg" alt="">
+		<ol class="navlist">
+			<ol><a href="#home" class="active">Home</a></ol>
+			<ol><a href="#about">About Us</a></ol>
+			<ol><a href="#terms">Term & Conditions</a></ol>
+			<ol><a href="#services">Services</a></ol>
+			<ol><a href="#coming soon">Updates</a></ol>
+			<ol><a href="#contact">Contact</a></ol>
+
+			<div class="top">
+			 <a onclick="hi()" class="btn">Logout</a>	
+		    </div> 
+		</ol>
+
+		<div class="bx bx-menu" id="menu-icon">
+			
+		</div>
+	</header>
+
+	<!----home section design--->
+	<section class="home" id="home">
+		<div class="home-text">
+			<div class="slide">
+				<span class="one">Hi</span>
+				<span class="two">I'm</span>
+			</div>
+			<h1>Text<span>Mint!</span></h1>
+
+			<p>Text Mint is a AI based online platform that reviews your long documents, multi-documents and will give you the best summary based on the tools that are used. You are looking to get more done, work smarter and save hours then this is the right place.</p>
+			<div class="button">
+				<a  class="btn">Welcome</a>	
+			</div>
+		</div>
+	</section>
+
+	<!----about section design--->
+	<section class="about" id="about">
+		<div class="about-img">
+			<img src="1.jpg">
+		</div>
+
+		<div class="about-text">
+			<h2>About <span>Us!</span></h2>
+			<h4><span>Text</span> Mint!</h4>
+			<p>To help you summarize,we provide you with a "Summary text tool". Summarize in 1-Click, go to the main idea or skim through so that you can then interpret your texts quickly. We will condense larger text to shorter so you get key summary. Our suggestions help to replace complicated sentences with more efficient ones and uphold accurate punctuation. Using a variety of innovative approaches including advanced machine learning and deep learning. We consistently break new ground in natural language processing (NLP) research to deliver unrivalled assistance in our website. Your data security and integrity is our top priority. Company core business integrity and client protections are critical, so your data integrity is safe with us.</p>
+			<!-- <a href="#services" class="btn">More About</a> -->
+		</div>
+	</section>
+
+	<!-- Terms & condition section -->
+	<section class="terms" id="terms">
+		<div class="main-text">
+			<p>Must read that before preceding toword services.</p>
+			<h2>Terms & <span>Conditions!</span> </h2>
+			<p>Text Mint is a AI based online platform that reviews your long documents, multi-documents and will give you the best summary based on the tools that are used. You are looking to get more done, work smarter and save hours then this is the right place.</p>
+		</div>
+
+		<div class="terms-content">
+			<div class="box">
+				<h2><span> User </span> Perspective!</h2>
+				<ul>
+					<li>Upload the txt file.</li>
+					<li> To download the file simple write file name with extention e.g: ali.doc,ali.txt,ali.pdf</li>
+					<li>Privacy will be insured.</li>
+					<li>Data integrity must insured.</li>
+					<li>Enjoy the best.</li>
+			    </ul>
+			</div>	
+		</div>	
+	</section>
+
+	<!----service section design--->
+	<section class="services" id="services">
+
+		<div class="main-text">
+			<p>Get ready for</p>
+			<h2>Our<span> Service!</span> </h2>
+			<p>Quickly summarize large volumes of text or document into shorter meaningful document using  Abstractive Text Summarization. Abstractive text summarization transforms lengthy documents into shorter versions which is usually difficult and expensive to undertake if done manually. The document is summarized using Natural language processing summarization techniques and human expertise to deliver as per your requirement.</p>
+		</div>
+		
+		<div class="services-content">
+			
+			<div class="box">
+				<h2>Upload <span>Files</span> Here!</h2>
+
+			    <form action="/action_page.php" enctype="multipart/form-data">
+                 <input type="file" id="myfile" name="myfile" multiple="multiple" accept=".txt" /><br /><br />
+				  <div class="top">
+					 <a  class="btn" onclick="displayText()">Generate Summary</a>	
+				  </div> 
+		        </form>
+			</div>
+
+			<div class="box">
+				<h2><span> Abstractive </span> Text Summarization!</h2>
+                <textarea id="freeform" name="freeform" rows="15" cols="65" placeholder="Your summary will here...!"></textarea>
+				
+                <div class="top">
+					<label>Save <span>As:</span></label>
+					<input placeholder="specify name eg:filename.txt" id="filename">
+					<a class="btn" id="download"> Download</a>	
+					<a  class="btn"id="readBtn">Read Loud</a>
+
+					
+				</div> 
+
+			</div>
+
+           
+			
+		</div>
+	</section>
+
+
+	<!----Coming Soon section design--->
+	<section class="coming soon" id="coming soon">
+		<div class="main-text">
+			<p>Coming Soon</p>
+			<h2><span>Futhure</span> Update!</h2>
+			<p>Futhure updates will be coming soon.</p>
+		</div>
+
+		<div class="cs-content">
+			<div class="row">
+				<img src="cs1.jpg">
+				<div class="layer">
+					<h5>Coming Soon</h5>
+					<p>Text Mint</p>
+					<a href="#"><i class='bx bx-link-external' ></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="cs2.jpg">
+				<div class="layer">
+					<h5>Coming Soon</h5>
+					<p>Text Mint</p>
+					<a href="#"><i class='bx bx-link-external' ></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="cs3.jpg">
+				<div class="layer">
+					<h5>Coming Soon</h5>
+					<p>Text Mint</p>
+					<a href="#"><i class='bx bx-link-external' ></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="cs4.jpg">
+				<div class="layer">
+					<h5>Coming Soon</h5>
+					<p>Text Mint</p>
+					<a href="#"><i class='bx bx-link-external' ></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="cs5.jpg">
+				<div class="layer">
+					<h5>Coming Soon</h5>
+					<p>Text Mint</p>
+					<a href="#"><i class='bx bx-link-external' ></i></a>
+				</div>
+			</div>
+
+			<div class="row">
+				<img src="cs6.jpg">
+				<div class="layer">
+					<h5>Coming Soon</h5>
+					<p>Text Mint</p>
+					<a href="#"><i class='bx bx-link-external' ></i></a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+		<!----contact section design--->
+		<section class="contact" id="contact">
+			<div class="contact-text">
+				<h2>Contact <span>Us!</span></h2>
+				<h4>If You Have Any Query Rregarding Text Mint.</h4>
+				<p>Your feedback will be highly appreciated. </p>
+				<div class="list">
+					<li><a href="#">03115969750</a></li>
+					<li><a href="#">zliaqat715@gmail.com</a></li>
+					
+				</div>
+	
+				<div class="contact-icons">
+					<a href="#"><i class='bx bxl-facebook' ></i></a>
+					<a href="#"><i class='bx bxl-twitter' ></i></a>
+					<a href="#"><i class='bx bxl-instagram-alt' ></i></a>
+					<a href="#"><i class='bx bxl-gmail' ></i></a>
+				</div>
+			</div>
+	
+			<div class="contact-form">
+				
+				<form action="" id="form">
+					
+					<input  id="name" placeholder="Your Name" >
+					<input  id="email" placeholder="Your Email">
+					<textarea name="" id="t" cols="50" rows="10" placeholder="How Can I Help You" ></textarea>
+					<a class="btn" id="btn" onclick="save()">Submits</a>				
+				</form>
+				
+			</div> 
+		</section>
+	
+
+	
+	<!----end section design--->
+	<section class="end">
+		<div class="last-text"><p>Copyright © 2022 by Team Text-Mint All Rights Reserved.</p></div>
+
+	</section>
+   
+	<!---custom js --->
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-database.js"></script>
+	<script>
+		const firebaseConfig = {
+		apiKey: "AIzaSyD-71kr6FxT1lwRb9yD_x7TIxThS9W-otM",
+		authDomain: "zee191135.firebaseapp.com",
+		databaseURL: "https://zee191135-default-rtdb.firebaseio.com",
+		projectId: "zee191135",
+		storageBucket: "zee191135.appspot.com",
+		messagingSenderId: "794552126089",
+		appId: "1:794552126089:web:224d629354f09f5eeb9458",
+		measurementId: "G-YWRSFWE6FX"
+		};
+		firebase.initializeApp(firebaseConfig);
+		var database = firebase.database();
+
+		function save(){
+			try{
+				var feedback = document.getElementById('t').value;
+				var name = document.getElementById('name').value;
+				var email = document.getElementById('email').value;
+			database.ref('Feedback').push({
+				name:name,
+				email:email,
+				feedback:feedback
+			});
+				window.alert('Feeback Submitted Sucessfully...')
+				feedback.value = '';
+				name.value = '';
+				email.value = '';
+			}
+			catch(e)
+			{
+				window.alert(e)
+			}
+			
+		}
+	</script>
+	<script>
+	
+		function hi()
+        {
+           window.location.assign("Fyp1.html");
+        }
+
+		function displayText() {
+            var fileInput = document.getElementById('myfile');
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                var text = e.target.result;
+				//document.getElementById('freeform').value = text;
+               generateSummary(text);
+            };
+
+            reader.readAsText(file);
+        }
+
+        function generateSummary(text) {
+            var summary = summarizeText(text, 1); // Generate a summary with 1 sentence
+            var summaryText = document.getElementById('freeform');
+            summaryText.value = summary;
+        }
+        function summarizeText(text, sentencesCount) {
+            var sentences = text.split('.'); // Split text into sentences
+            var summarizedSentences = sentences.slice(0, sentencesCount); // Get the desired number of sentences for the summary
+            var summary = summarizedSentences.join('. '); // Join the summary sentences with a period and space
+            return summary;
+        }
+		// function displayText() {
+        //     var fileInput = document.getElementById('myfile');
+        //     var files = fileInput.files;
+        //     var reader;
+        //     var content = '';
+
+        //     for (var i = 0; i < files.length; i++) {
+        //         reader = new FileReader();
+
+        //         reader.onload = function(e) {
+        //             content += e.target.result+"\n" ;
+        //             document.getElementById('freeform').value = content;
+        //         };
+
+        //         reader.readAsText(files[i]);
+        //     }
+        // }
+
+		function download(filename,content)
+		{
+           const element=document.createElement('a');
+		   const blob=new Blob([content],{type: 'plain/text/application/msword'});
+
+		   const fileUrl=URL.createObjectURL(blob);
+
+		   element.setAttribute('href',fileUrl);
+		   element.setAttribute('download',filename);
+
+		   element.style.display='none';
+
+		   document.body.appendChild(element);
+		   element.click();
+		   document.body.removeChild(element); 
+		};
+
+		window.onload=()=>
+		{
+			document.getElementById('download').addEventListener('click', e =>{
+				const filename=document.getElementById('filename').value;
+				const content=document.getElementById('freeform').value;
+				if(filename&&content){
+					download(filename,content);
+				}
+			});
+		}
+
+	</script>
+	<script>
+        // Get the input and button elements
+        const input = document.getElementById('freeform');
+        const readBtn = document.getElementById('readBtn');
+      
+        // Create a new instance of the SpeechSynthesis API
+        const synth = window.speechSynthesis;
+      
+        // Create a function to read the input text out loud
+        function speakText() {
+          // Create a new SpeechSynthesisUtterance object with the input text
+          const utterance = new SpeechSynthesisUtterance(input.value);
+          // Set the voice and rate of the utterance (optional)
+          utterance.voice = synth.getVoices()[0];
+          utterance.rate = 1.2;
+          // Speak the utterance
+          synth.speak(utterance);
+        }
+      
+        // Add an event listener to the button element
+        readBtn.addEventListener('click', speakText);
+      </script>
+	
+
+	<!---custom js link--->
+	<script type="text/javascript" src="fyp1.txt"></script>
+	
+
+</body>
+</html>
